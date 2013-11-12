@@ -635,7 +635,7 @@ public class CustomViewAbove extends ViewGroup {
 		case MotionEvent.ACTION_DOWN:
 			int index = MotionEventCompat.getActionIndex(ev);
 			mActivePointerId = MotionEventCompat.getPointerId(ev, index);
-			if (mActivePointerId == INVALID_POINTER)
+			if (mActivePointerId == INVALID_POINTER || index == INVALID_POINTER)
 				break;
 			mLastMotionX = mInitialMotionX = MotionEventCompat.getX(ev, index);
 			mLastMotionY = MotionEventCompat.getY(ev, index);
